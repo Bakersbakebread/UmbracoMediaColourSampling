@@ -13,6 +13,15 @@ I wrote something that takes the focal point of the image from Umbraco and gets 
 
 ## Have fun, too! 
 
-Clone down the site and expirement moving around the focal point on an image. 
+Clone down the site and experiment moving around the focal point on an image. 
 
 The magic happens in the `ColourService` and the `FocalPointRectangle` model. Try adjusting values in there and see what you can do! 
+
+```
+mkdir UmbracoMediaColourSampling
+cd UmbracoMediaColourSampling
+git clone https://github.com/Bakersbakebread/UmbracoMediaColourSampling.git .
+dotnet run
+```
+
+You'll have to through the install window, but uSync does all the things for us afterwards.
