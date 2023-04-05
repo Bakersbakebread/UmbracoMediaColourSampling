@@ -1,0 +1,112 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+    <PackageReference Include="Umbraco.Cms" Version="10.4.2" />
+    <PackageReference Include="uSync" Version="10.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
+    <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\media\0glljxxs\pink.jpg" />
+    <Content Include="wwwroot\media\0l1iajpr\purple.jpg" />
+    <Content Include="wwwroot\media\f0alixyc\station.jpg" />
+    <Content Include="wwwroot\media\g14le2r5\red.jpg" />
+    <Content Include="wwwroot\media\hu3bbzdy\owain.png" />
+    <Content Include="wwwroot\media\iftkgkr3\yellow.jpg" />
+    <Content Include="wwwroot\media\jpxoel4i\cat.jpg" />
+    <Content Include="wwwroot\media\noyfnanw\train.jpg" />
+    <Content Include="wwwroot\media\rcgfeumw\church.jpg" />
+    <Content Include="wwwroot\media\t1tfwthe\horse.jpg" />
+    <Content Include="wwwroot\media\vd0f4cwk\skyscape.jpg" />
+    <Content Include="wwwroot\media\zxsngocm\car.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="uSync\v9\ContentTypes\home.config" />
+    <None Include="uSync\v9\Content\hompage.config" />
+    <None Include="uSync\v9\DataTypes\ApprovedColor.config" />
+    <None Include="uSync\v9\DataTypes\CheckboxList.config" />
+    <None Include="uSync\v9\DataTypes\ContentPicker.config" />
+    <None Include="uSync\v9\DataTypes\DatePicker.config" />
+    <None Include="uSync\v9\DataTypes\DatePickerWithTime.config" />
+    <None Include="uSync\v9\DataTypes\Dropdown.config" />
+    <None Include="uSync\v9\DataTypes\DropdownMultiple.config" />
+    <None Include="uSync\v9\DataTypes\ImageCropper.config" />
+    <None Include="uSync\v9\DataTypes\ImageMediaPicker.config" />
+    <None Include="uSync\v9\DataTypes\LabelBigint.config" />
+    <None Include="uSync\v9\DataTypes\LabelDatetime.config" />
+    <None Include="uSync\v9\DataTypes\LabelDecimal.config" />
+    <None Include="uSync\v9\DataTypes\LabelInteger.config" />
+    <None Include="uSync\v9\DataTypes\LabelString.config" />
+    <None Include="uSync\v9\DataTypes\LabelTime.config" />
+    <None Include="uSync\v9\DataTypes\ListViewContent.config" />
+    <None Include="uSync\v9\DataTypes\ListViewMedia.config" />
+    <None Include="uSync\v9\DataTypes\ListViewMembers.config" />
+    <None Include="uSync\v9\DataTypes\MediaPicker.config" />
+    <None Include="uSync\v9\DataTypes\MediaPickerLegacy.config" />
+    <None Include="uSync\v9\DataTypes\MemberPicker.config" />
+    <None Include="uSync\v9\DataTypes\MultipleImageMediaPicker.config" />
+    <None Include="uSync\v9\DataTypes\MultipleMediaPicker.config" />
+    <None Include="uSync\v9\DataTypes\MultipleMediaPickerLegacy.config" />
+    <None Include="uSync\v9\DataTypes\MultiURLPicker.config" />
+    <None Include="uSync\v9\DataTypes\Numeric.config" />
+    <None Include="uSync\v9\DataTypes\Radiobox.config" />
+    <None Include="uSync\v9\DataTypes\RichtextEditor.config" />
+    <None Include="uSync\v9\DataTypes\Tags.config" />
+    <None Include="uSync\v9\DataTypes\Textarea.config" />
+    <None Include="uSync\v9\DataTypes\Textstring.config" />
+    <None Include="uSync\v9\DataTypes\Truefalse.config" />
+    <None Include="uSync\v9\DataTypes\UploadArticle.config" />
+    <None Include="uSync\v9\DataTypes\UploadAudio.config" />
+    <None Include="uSync\v9\DataTypes\UploadFile.config" />
+    <None Include="uSync\v9\DataTypes\UploadVectorGraphics.config" />
+    <None Include="uSync\v9\DataTypes\UploadVideo.config" />
+    <None Include="uSync\v9\Languages\en-us.config" />
+    <None Include="uSync\v9\MediaTypes\file.config" />
+    <None Include="uSync\v9\MediaTypes\folder.config" />
+    <None Include="uSync\v9\MediaTypes\image.config" />
+    <None Include="uSync\v9\MediaTypes\umbracomediaarticle.config" />
+    <None Include="uSync\v9\MediaTypes\umbracomediaaudio.config" />
+    <None Include="uSync\v9\MediaTypes\umbracomediavectorgraphics.config" />
+    <None Include="uSync\v9\MediaTypes\umbracomediavideo.config" />
+    <None Include="uSync\v9\Media\car.config" />
+    <None Include="uSync\v9\Media\cat.config" />
+    <None Include="uSync\v9\Media\church.config" />
+    <None Include="uSync\v9\Media\green.config" />
+    <None Include="uSync\v9\Media\horse.config" />
+    <None Include="uSync\v9\Media\owain.config" />
+    <None Include="uSync\v9\Media\pink.config" />
+    <None Include="uSync\v9\Media\purple.config" />
+    <None Include="uSync\v9\Media\red.config" />
+    <None Include="uSync\v9\Media\skyscape.config" />
+    <None Include="uSync\v9\Media\station.config" />
+    <None Include="uSync\v9\Media\train.config" />
+    <None Include="uSync\v9\Media\yellow.config" />
+    <None Include="uSync\v9\MemberTypes\member.config" />
+    <None Include="uSync\v9\Templates\home.config" />
+    <None Include="uSync\v9\usync.config" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- Razor files are needed for the backoffice to work correctly -->
+    <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+  </PropertyGroup>
+
+</Project>

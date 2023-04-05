@@ -1,0 +1,58 @@
+﻿<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+    body,
+    html {
+    	margin: 0;
+    	padding: 0;
+    	background: #313638;
+    	color: white;
+    	font-family: 'Poppins', cursive;
+    }
+    
+    body {
+    	display:  flex;
+    	align-items: center;
+    	justify-content: space-evenly;
+    }
+    .intro {
+		max-width: 30vw;
+		padding:  2rem;
+    }
+    h1 {
+    	font-size: 3rem;
+    }
+    .container {
+
+    	display: grid;
+    	grid-template-columns: repeat(4, 1fr);
+    
+    }
+    .img-wrapper {
+        	border: solid 1px papayawhip;
+    	padding: 2rem;
+    }
+    
+    img {
+    	max-width: 200px;
+    }
+    </style>
+</head>
+
+</html>
+<body>
+	<div class="intro">
+		<div class="intro--inner">
+			<h1>Color sampling from Umbraco Media.</h1>
+			<p>Uses the ImageCropper's focal point to create a rectangle around it, then samples the average color from within.</p>
+			<p>Experiment in the media section moving the focal point around, and also in the <code>Models/FocalPointRectangle.cs</code> class to adjust sizing.</p>
+		</div>
+	</div>
+
+@RenderBody()
+
+</body>

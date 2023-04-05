@@ -1,0 +1,18 @@
+﻿@inherits UmbracoViewPage<IEnumerable<dominantColorsUmbraco.Models.ImageWithColour>>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout.cshtml";
+}
+
+<main>
+	
+	<div class="container">
+		@foreach (var image in Model)
+		{
+			<div class="img-wrapper" style="background-color: #@image.Brightest">
+				<img src="@image.Path" alt="Colourised Image!"/>
+			</div>
+		}
+	</div>
+
+</main>
